@@ -1,0 +1,7 @@
+ns_front:
+    resource: "@NSFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ns_core:
+    resource: "@NSCoreBundle/Resources/config/core-routing.yml"
+    prefix:   /

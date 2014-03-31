@@ -1,0 +1,7 @@
+parameters:
+#    ns_front.example.class: NS\FrontBundle\Example
+
+services:
+#    ns_front.example:
+#        class: %ns_front.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
