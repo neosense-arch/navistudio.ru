@@ -9,8 +9,5 @@ templates:
                 title: "Верхняя панель"
                 fixed: true
             -
-                name: left
-                title: "Левая панель"
-            -
                 name: content
                 title: "Контентная область"
