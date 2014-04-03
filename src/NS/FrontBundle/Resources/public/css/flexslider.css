@@ -1,0 +1,88 @@
+/*
+ * jQuery FlexSlider v1.0 (Release)
+ * http://flex.madebymufffin.com
+ *
+ * Copyright 2011, Tyler Smith
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+/* Необходимые стили для FlexSlider
+*********************************/ 
+.flexslider {width: 100%; margin: 0; padding: 0;}
+.flexslider .slides li {width:332px; height:456px; list-style-type:none; display:none;} /* Скрываем слайды доя загрузки JS. Избегаем дергания изображений */
+.flexslider .slides img {max-width: 100%; }
+
+
+/* Тема по умолчанию для FlexSlider
+*********************************/
+.flexslider {width:332px; height:456px;}
+.flexslider .slides  li {position: relative;}
+/* Предполагаемый контейнер для устнановок анимации "slides".*/
+.flexslider-container {position: relative;}
+
+
+
+
+/* Навигация */
+.flex-direction-nav{ display:block;}
+.flex-direction-nav li{ list-style-type:none;
+	font:12px Verdana;
+	color:#000000;}
+.flex-direction-nav li a { width: 56px; height: 18px; margin: 0 0 0 0; bottom:0; display: block; position:absolute; cursor: pointer; text-indent: -9999px;
+	font:12px Verdana!important;
+	color:#000000!important;
+	text-decoration:none;} /* set negative margin-top equal to half the height on the directional-nav for perfect vertical centering */
+.flex-direction-nav li a.flex-next {background:url(../img/next.jpg) no-repeat left top; right: 0;
+	font:12px Verdana;
+	color:#000000;
+	text-decoration:none;}
+.flex-direction-nav li a.flex-prev {background:url(../img/back.jpg) no-repeat left top; right: 62px;
+	font:12px Verdana;
+	color:#000000;
+	text-decoration:none;}
+.flex-direction-nav li a.flex-next.flex-disabled {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20); 
+	-moz-opacity: 0.2; 
+	-khtml-opacity: 0.2; 
+	opacity: 0.2;}
+.flex-direction-nav li a.flex-prev.flex-disabled {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=20); 
+	-moz-opacity: 0.2; 
+	-khtml-opacity: 0.2; 
+	opacity: 0.2;}
+	
+.news .flex-direction-nav li a.flex-next {background:url(../img/next_2.jpg) no-repeat left top; right: 0;
+	font:12px Verdana;
+	color:#000000;
+	text-decoration:none;
+	width: 66px; height: 18px;}
+.news .flex-direction-nav li a.flex-prev {background:url(../img/prev_2.jpg) no-repeat left top; right: 62px;
+	font:12px Verdana;
+	color:#000000;
+	right:73px;
+	text-decoration:none;
+	width: 57px; height: 18px;}
+	
+
+
+
+
+/* Управление */
+.flex-control-nav {position:absolute;
+	left:426px; bottom:0px;
+	height:10px;
+	z-index:1000;
+	display:none;} /* set negative margin-left equal to half the width on the control-nav for perfect centering */
+.flex-control-nav li {margin: 0 0 0 0; float: left; list-style-type:none;}
+.flex-control-nav li a { float:left;
+	text-indent:-9999px;
+	margin-right:5px;
+	list-style-type:none;
+	background:url(../img/nav_slider.png) no-repeat left top;
+	display:block;
+	width:10px; height:10px;
+	cursor:pointer;
+	font:0px Arial;}
+.flex-control-nav li a:hover {background:url(../img/nav_slider.png) no-repeat right top;}
+.flex-control-nav li a.flex-active {background:url(../img/nav_slider.png) no-repeat right top; cursor: default;}
