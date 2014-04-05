@@ -1,3 +1,5 @@
-ns_front_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: NSFrontBundle:Default:index }
+ns_front_news_item:
+    pattern: '/news/{itemSlug}'
+    defaults:
+        _controller: NSCmsBundle:Pages:pageName
+        name: 'newsItem'

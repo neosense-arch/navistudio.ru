@@ -1,8 +1,46 @@
-<ul>
-    {% for item in items %}
-        <li>
-            <p>{{ item.settings.createdAt|date('d/m/Y') }}</p>
-            <a href="#">{{ item.settings.description }}</a>
-        </li>
-    {% endfor %}
-</ul>
+<div class="flexslider news">
+    <div class="flex-viewport" style="overflow: hidden; position: relative;">
+        <ul class="slides" style="width: 600%; -webkit-transition: 0.6s; transition: 0.6s; -webkit-transform: translate3d(0px, 0px, 0px);">
+            {% for item in items %}
+                {% if loop.index % 3 == 1 %}
+                    <li class="flex-active-slide" style="width: 332px; float: left; display: block;">
+                {% endif %}
+
+                    <div class="boxOneNew{% if loop.index % 3 != 1 %} pad{% endif %}">
+                        <p>
+                            <span>{{ item.settings.createdAt|date('d.m.Y') }}</span>
+                            <a href="{{ url('ns_front_news_item', {itemSlug:item.slug}) }}">
+                                {{ item.settings.description }}
+                            </a>
+                        </p>
+                    </div>
+
+                {% if loop.index % 3 == 0 %}
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if items|length%3 > 0 %}
+                {% for i in 1 .. 3 - (items|length % 3) %}
+                    <div class="boxOneNew pad"></div>
+                {% endfor %}
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+    <ol class="flex-control-nav flex-control-paging">
+        <li><a class="flex-active">1</a></li>
+        <li><a class="">2</a></li>
+        <li><a class="">3</a></li>
+    </ol>
+    <ul class="flex-direction-nav">
+        <li><a class="flex-prev flex-disabled" href="#">НАЗАД</a></li>
+        <li><a class="flex-next" href="#">ДАЛЕЕ</a></li>
+    </ul>
+</div>
+
+<style>
+    .blockCont {
+        background: none;
+    }
+</style>

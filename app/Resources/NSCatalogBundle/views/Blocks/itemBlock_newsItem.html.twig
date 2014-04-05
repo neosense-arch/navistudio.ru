@@ -1,0 +1,9 @@
+{% if item %}
+    <div class="newBig">
+        <p class="date">{{ item.settings.createdAt|date('d.m.Y') }}</p>
+        <h2>{{ item.title }}</h2>
+        {{ item.settings.contents|raw }}
+    </div>
+{% else %}
+	<p>Товар не найден</p>
+{% endif %}

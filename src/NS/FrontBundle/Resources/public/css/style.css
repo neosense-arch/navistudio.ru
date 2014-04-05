@@ -653,3 +653,13 @@ footer ul li a{
 	text-decoration:none;
 	padding:0 0 0 0;}
 footer ul li a:hover{ text-decoration:underline; color:#e2c49d;}
+
+
+
+.blockCont .flexslider {
+    margin: -23px 0 -48px -26px;
+    position: relative;
+}
+.blockCont.news .flex-direction-nav li a.flex-next {
+    right: 13px;
+}

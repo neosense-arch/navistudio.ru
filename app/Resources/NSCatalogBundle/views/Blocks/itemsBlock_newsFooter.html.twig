@@ -1,0 +1,10 @@
+<ul>
+    {% for item in items %}
+        <li>
+            <p>{{ item.settings.createdAt|date('d/m/Y') }}</p>
+            <a href="{{ url('ns_front_news_item', { itemSlug: item.slug }) }}">
+                {{ item.settings.description }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
