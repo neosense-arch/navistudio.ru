@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Navistudio</title>
+    <title>{{ page.title|default('NaviStudio') }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/nsfront/css/style.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/nsfront/css/flexslider.css') }}" />
@@ -19,89 +19,43 @@
     <!--[if lt IE 9]><script src="{{ asset('bundles/nsfront/js/html5.js') }}"></script><![endif]-->
 </head>
 <body>
-
-
-<!-- BEGIN BODY -->
-
 <div class="boxTop_1">
     <div class="repeat-x">
-
-        <!-- BEGIN HEADER -->
-
         <div class="boxHeader">
             <header>
-                <div class="lang">
-                    <a href="#" class="active">РУ</a>
-                    <a href="#">EN</a>
-                </div>
+                {#<div class="lang">#}
+                    {#<a href="#" class="active">РУ</a>#}
+                    {#<a href="#">EN</a>#}
+                {#</div>#}
 
                 {# HEADER AREA #}
                 {{ ns_cms_area(blocks, 'header') }}
-
                 <div class="clear"></div>
             </header>
         </div>
-
-        <!-- HEADER EOF   -->
-
-        <!-- BEGIN CONTENT -->
 
         <div class="content">
 
             {# CONTENT AREA #}
             {{ ns_cms_area(blocks, 'content_fixed') }}
 
-            <div class="mainNav">
-                <nav>
-                    <ul>
-                        <li class="active"><a href="#">Студия</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Оборудование</a></li>
-                        <li><a href="#">Клиенты</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <a href="#" class="oneLink">Контрольная<br> комната</a>
-            <a href="#" class="oneLink second">Вокальная<br> комната</a>
-            <a href="#" class="oneLink third">Акустическая<br> комната</a>
             <section class="boxMain">
                 <div class="boxTitle">
-                    <h1>СТУДИЯ NAVISTUDIO</h1>
+                    {# CONTENT HEADER AREA #}
+                    {{ ns_cms_area(blocks, 'content_header')|default('<h1>' ~ page.title ~ '</h1>')|raw }}
                 </div>
                 <div class="blockCont">
-                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti so- ciosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin con- dimentum fermentum nunc. Etiam phare</p>
+                    {# CONTENT AREA #}
+                    {{ ns_cms_area(blocks, 'content') }}
                 </div>
             </section>
         </div>
 
-        <!-- CONTENT EOF   -->
-
-        <!-- BEGIN FOOTER -->
-
         <footer>
-            <ul>
-                <li>
-                    <p>24/10/2013</p>
-                    <a href="#">Открылась новая версия сайта студии naviStudio. Что изменилось — по ссылке</a>
-                </li>
-                <li>
-                    <p>18/10/2013</p>
-                    <a href="#">Мы записали новый альбом альтернативной рок-группы «План Ломоносова». Две недели записи и сведения и альбом предстаёт миру</a>
-                </li>
-                <li>
-                    <p>05/10/2013</p>
-                    <a href="#">В студии появилось новое оборудование — комбики Marshal с усиленным звуком, микрофоны и примочки</a>
-                </li>
-            </ul>
+            {# FOOTER AREA #}
+            {{ ns_cms_area(blocks, 'footer') }}
             <div class="clear"></div>
         </footer>
-
-
-
-        <!-- FOOTER EOF   -->
-
     </div>
 </div>
 </body>

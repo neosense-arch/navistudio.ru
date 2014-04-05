@@ -1,0 +1,8 @@
+<ul>
+    {% for item in items %}
+        <li>
+            <p>{{ item.settings.createdAt|date('d/m/Y') }}</p>
+            <a href="#">{{ item.settings.description }}</a>
+        </li>
+    {% endfor %}
+</ul>

@@ -13,5 +13,12 @@ templates:
                 title: "Верхняя часть контентной области"
                 fixed: true
             -
+                name: content_header
+                title: "Заголовок контентной области"
+            -
                 name: content
                 title: "Контентная область"
+            -
+                name: footer
+                title: "Нижняя часть"
+                fixed: true

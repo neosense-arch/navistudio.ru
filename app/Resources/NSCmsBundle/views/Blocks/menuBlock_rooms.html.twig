@@ -1,0 +1,14 @@
+{% for item in menu.children if item.displayed %}
+    {% set cls = '' %}
+    {% if loop.index == 2 %}
+        {% set cls = 'second' %}
+    {% elseif loop.index == 3 %}
+        {% set cls = 'third' %}
+    {% endif %}
+
+    {% set a = item.label|split(' ') %}
+    {% set first = a[0] %}
+    {% set rest = a|slice(1)|join(' ') %}
+
+    <a href="{{ item.uri }}" class="oneLink {{ cls }}">{{ first }}<br>{{ rest }}</a>
+{% endfor %}
