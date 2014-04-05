@@ -57,3 +57,19 @@ avalanche_imagine:
             type:    thumbnail
             options: { size: [800, 800], mode: inset }
 
+# FK ElFinder Bundle config
+fm_elfinder:
+    editor: ckeditor
+    connector:
+        roots:
+            music:
+                driver: LocalFileSystem
+                path: 'upload/music'
+                upload_allow:
+                    - 'image/png'
+                    - 'image/jpg'
+                    - 'image/jpeg'
+                    - 'image/gif'
+                    - 'audio/mpeg'
+                upload_deny: ['all']
+                upload_max_size: 100M

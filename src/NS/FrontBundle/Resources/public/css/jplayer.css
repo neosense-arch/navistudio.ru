@@ -442,7 +442,7 @@ div.jp-playlist ul {
 .jp-playlist{
 	padding:4px 4px 0 4px;
 	position:relative;
-	height:177px;
+	/*height:177px;*/
 	}
 div.jp-title li {
 	padding:0 0;

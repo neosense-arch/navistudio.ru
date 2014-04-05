@@ -1,6 +1,7 @@
 /web/bundles/
-!/web/upload/documents
-!/web/upload/images
+/web/upload/documents
+/web/upload/images
+/web/upload/music
 /web/upload/j/
 /web/media/
 /web/cgi-bin/

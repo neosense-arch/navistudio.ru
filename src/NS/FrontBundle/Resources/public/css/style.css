@@ -618,6 +618,10 @@ nav ul li a:hover, nav ul li.active a{
 	margin:0 -3px 0 0;
 }
 
+div.jp-title li {
+    width:120px;
+}
+
 /*
 ================================================================================
 |                                     FOOTER                                   |
