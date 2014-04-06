@@ -368,7 +368,7 @@ nav ul li a:hover, nav ul li.active a{
 
 .boxServices{
 	background:url(../img/block_cont.png) repeat left top;
-	padding:23px 22px 20px 26px;
+	padding:35px 22px 20px 0;
 	margin:0 0 3px 0;
 	font:13px/22px Verdana;
 	color:#ffffff;}	
