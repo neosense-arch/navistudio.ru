@@ -1,15 +1,15 @@
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-	animationLoop: false,
-	slideshow: false
-  });
-});
+$(window).load(function () {
+    $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        slideshow: false
+    });
 
-jQuery('.blockScroll, .scrollCont').jScrollPane({
-    showArrows:true,
-    verticalDragMinHeight: 29,
-    verticalDragMaxHeight: 29
+    jQuery('.blockScroll, .scrollCont').jScrollPane({
+        showArrows:true,
+        verticalDragMinHeight: 29,
+        verticalDragMaxHeight: 29
+    });
 });
 
 (function($){
