@@ -1,4 +1,4 @@
-<div class="flexslider">
+<div class="flexslider clients">
     <ul class="slides">
         {% for item in items %}
             {% if loop.index % 4 == 1 %}
@@ -33,11 +33,6 @@
     </ul>
 </div>
 
-<style>
-    .blockCont {
-        background: none;
-    }
-</style>
 <script>
-    $('.blockCont').removeClass('scrollCont');
+    $('.blockCont').removeClass('scrollCont').css({background:'none'});
 </script>
