@@ -190,63 +190,27 @@ nav ul li a:hover, nav ul li.active a{
 	background:url(../img/bg_link.png) no-repeat left top;
 	padding:14px 0 0 25px;
 	position:absolute;
-	left:253px; top:623px;
+    left:195px; top:472px;
 	font:15px Verdana;
 	color:#ffffff;
-	text-decoration:underline;}
+	text-decoration:underline;
+}
 .oneLink.second{
-	background:url(../img/bg_link.png) no-repeat 66px bottom;
-	padding:0 0 25px 0;
-	left:513px; top:437px;}
-.oneLink:hover{ color: #ff9000; text-decoration:none;}
+	background:url(../img/bg_link.png) no-repeat left bottom;
+    padding:0 0 25px 21px;
+    left:590px; top:224px;
+}
+.oneLink.third {
+    background-position:left bottom;
+    left:464px; top:396px;
+    padding:0 0 25px 21px;
+}
+.oneLink:hover{
+    color: #ff9000;
+    background-image:url(../img/link_on.png);
+    text-decoration:none;
+}
 
-.boxTop_1 .oneLink{
-	left:195px; top:472px;}
-.boxTop_1 .oneLink.second{
-	background-position:left bottom;
-	left:590px; top:224px;
-	padding:0 0 25px 21px;}
-.boxTop_1 .oneLink.third{
-	background-position:left bottom;
-	left:464px; top:396px;
-	padding:0 0 25px 21px;}
-.oneLink:hover{ background-image:url(../img/link_on.png);}
-
-.boxTop_4 .oneLink{
-	left:484px; top:373px;
-	background-position:right top;
-	padding:13px 7px 0 0;}
-.boxTop_4 .oneLink.second{
-	left:691px; top:270px;
-	background-position:right top;
-	padding:8px 23px 0 0;}
-	
-.boxTop_3 .oneLink{
-	background-position:left top;
-	left:392px; top:652px;
-	padding:2px 0 0 30px;}
-.boxTop_3 .oneLink.second{
-	background-position:left top;
-	left:435px; top:376px;
-	padding:9px 0 0 22px;}
-.boxTop_3 .oneLink.third{
-	background-position:left top;
-	left:719px; top:288px;
-	padding:18px 0 0 10px;}
-	
-	
-.boxTop_2 .oneLink{
-	background-position:right top;
-	left:186px; top:442px;
-	padding:21px 13px 0 0;}
-.boxTop_2 .oneLink.second{
-	background-position:right top;
-	left:868px; top:230px;
-	padding:16px 21px 0 0;}
-
-
-	
-	
 .boxMain{
 	padding:35px 0 0 657px;
 	width:332px;}

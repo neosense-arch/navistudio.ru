@@ -1,8 +1,74 @@
 templates:
     -
         path:    "NSCmsBundle:Pages:page.html.twig"
-        title:   "Default page template"
+        title:   "Шаблон по умолчанию"
         default: true
+        areas:
+            -
+                name: header
+                title: "Верхняя панель"
+                fixed: true
+            -
+                name: content_fixed
+                title: "Верхняя часть контентной области"
+                fixed: true
+            -
+                name: content_header
+                title: "Заголовок контентной области"
+            -
+                name: content
+                title: "Контентная область"
+            -
+                name: footer
+                title: "Нижняя часть"
+                fixed: true
+    -
+        path:    "NSCmsBundle:Pages:page_control.html.twig"
+        title:   "Контрольная комната"
+        areas:
+            -
+                name: header
+                title: "Верхняя панель"
+                fixed: true
+            -
+                name: content_fixed
+                title: "Верхняя часть контентной области"
+                fixed: true
+            -
+                name: content_header
+                title: "Заголовок контентной области"
+            -
+                name: content
+                title: "Контентная область"
+            -
+                name: footer
+                title: "Нижняя часть"
+                fixed: true
+    -
+        path:    "NSCmsBundle:Pages:page_acoustic.html.twig"
+        title:   "Акустическая комната"
+        areas:
+            -
+                name: header
+                title: "Верхняя панель"
+                fixed: true
+            -
+                name: content_fixed
+                title: "Верхняя часть контентной области"
+                fixed: true
+            -
+                name: content_header
+                title: "Заголовок контентной области"
+            -
+                name: content
+                title: "Контентная область"
+            -
+                name: footer
+                title: "Нижняя часть"
+                fixed: true
+    -
+        path:    "NSCmsBundle:Pages:page_vocal.html.twig"
+        title:   "Вокальная комната"
         areas:
             -
                 name: header
