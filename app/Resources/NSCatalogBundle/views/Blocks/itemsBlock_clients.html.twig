@@ -1,0 +1,40 @@
+<div class="flexslider">
+    <ul class="slides">
+        {% for item in items %}
+            {% if loop.index % 4 == 1 %}
+                <li>
+            {% endif %}
+
+            <div class="boxOneClient">
+                <a href="{{ item.settings.site|default('#') }}" target="_blank">
+                    <img src="{{ ('upload/j/' ~ item.settings.logo) | apply_filter('clients_small') }}" width="67" alt=""/>
+                </a>
+
+                <div class="descriptionClient">
+                    <p class="name">{{ item.title }}</p>
+                    {% if item.settings.site %}
+                        <p class="site">Сайт: <a href="{{ item.settings.site }}" target="_blank">{{ item.settings.siteName|default(item.settings.site) }}</a></p>
+                    {% endif %}
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            {% if loop.index % 4 == 0 %}
+                </li>
+            {% endif %}
+        {% endfor %}
+
+        {% if items|length % 4 > 0 %}
+            {% for i in 1 .. 4 - (items|length % 4) %}
+                <div class="boxOneClient"></div>
+            {% endfor %}
+            </li>
+        {% endif %}
+    </ul>
+</div>
+
+<style>
+    .blockCont {
+        background: none;
+    }
+</style>

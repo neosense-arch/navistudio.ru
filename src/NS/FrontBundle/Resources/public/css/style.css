@@ -282,11 +282,15 @@ nav ul li a:hover, nav ul li.active a{
 	position:relative;}
 .boxOneClient{
 	background:url(../img/block_cont.png) repeat left top;
+    height:72px;
 	padding:18px 0 13px 18px;
 	margin:0 0 3px 0;}
 .boxOneClient.second{ padding-bottom:18px;}
 .boxOneClient.third{ padding-bottom:26px;}
 .boxOneClient.last{ padding-bottom:39px;}
+.boxOneClient a {
+    text-decoration: none;
+}
 .boxOneClient a img{
 	display:inline-block;
 	vertical-align:middle;
