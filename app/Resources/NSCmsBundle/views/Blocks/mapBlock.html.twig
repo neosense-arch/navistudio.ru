@@ -1,0 +1,50 @@
+{# Map center #}
+{% set lat = settings.lat|number_format(6, '.', '') %}
+{% set lng = settings.lng|number_format(6, '.', '') %}
+{% set zoom = settings.zoom|default(16) %}
+
+{# Map dimensions #}
+{% set width = settings.width|default(600) %}
+{% set height = settings.height|default(600) %}
+
+{# Marker settings #}
+{% set markerLat = settings.markerLat|default(settings.lat)|number_format(6, '.', '') %}
+{% set markerLng = settings.markerLng|default(settings.lng)|number_format(6, '.', '') %}
+{% set markerTitle = settings.markerTitle|default('') %}
+
+{# Info window settings #}
+{% set infoWidth = width/2|round() %}
+{% set infoHeight = height/4|round() %}
+
+
+<div class="ns-map" id="ns-map-{{ uid }}" style="width:{{ width }}px;height:{{ height }}px;margin-top:20px;"></div>
+
+<p><a href="https://www.google.ru/maps/place/%D0%93%D1%80%D0%BE%D1%85%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D0%B5%D1%80.,+32,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0/@55.7773965,37.6437657,17z/data=!4m2!3m1!1s0x46b54a70b8695ff1:0xfe6eb697f1288240" target="_blank">Открыть карту</a></p>
+
+<script type="text/javascript">
+    (function(){
+        function initialize() {
+            var mapOptions = {
+                center: new google.maps.LatLng({{ lat }}, {{ lng }}),
+                zoom: {{ zoom }},
+                scrollwheel: false
+            };
+            var map = new google.maps.Map(document.getElementById("ns-map-{{ uid }}"), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng({{ markerLat }}, {{ markerLng }}),
+                map: map,
+                title:"{{ markerTitle }}"
+            });
+
+            {% if markerTitle %}
+                var infowindow = new google.maps.InfoWindow({
+                    content: "<p style=\"width:{{ infoWidth }}px\">{{ markerTitle }}</p>"
+                });
+                infowindow.open(map,marker);
+            {% endif %}
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    })();
+</script>
+
