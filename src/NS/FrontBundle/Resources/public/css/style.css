@@ -631,3 +631,14 @@ footer ul li a:hover{ text-decoration:underline; color:#e2c49d;}
 .blockCont.news .flex-direction-nav li a.flex-next {
     right: 13px;
 }
+.ns-loader {
+    background: rgba(0,0,0,0.5) url(../img/loader.gif) no-repeat center center;
+    display: none;
+    height: 100%;
+    left:0;
+    opacity:0;
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index:999;
+}

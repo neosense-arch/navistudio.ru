@@ -90,6 +90,19 @@ $(window).load(function () {
         initNav: function(){
             if (!History.enabled) return;
 
+            var fnSlideOut = function(){
+                $('.boxMain').animate({opacity:0,marginLeft:50},200);
+                $('.mainNav').animate({opacity:0,marginLeft:-50},200);
+                $('.oneLink').animate({opacity:0,marginLeft:-50},200);
+                $('.ns-loader').css({display:'block'}).animate({opacity:1},200);
+            };
+            var fnSlideIn = function(){
+                $('.boxMain').animate({opacity:1,marginLeft:0},200);
+                $('.mainNav').animate({opacity:1,marginLeft:0},200);
+                $('.oneLink').animate({opacity:1,marginLeft:0},200);
+                $('.ns-loader').animate({opacity:0},200,function(){$('.ns-loader').css({display:'none'})});
+            };
+
             History.Adapter.bind(window,'statechange', function() {
                 var res = History.getState().data.res;
                 var html = $(res);
@@ -106,21 +119,22 @@ $(window).load(function () {
                     $('.blockCont').removeClass('scrollCont').css({'background':'none'});
                 }
 
-                // reinitializing
-                navistudio.initSlider();
-                navistudio.initScroll();
-                navistudio.initMap();
+                setTimeout(function(){
+                    // reinitializing
+                    navistudio.initSlider();
+                    navistudio.initScroll();
+                    navistudio.initMap();
+                }, 400);
             });
 
-            //init
-//            initState = $('body').data('init');
-//            History.replaceState(initState, initState.data.title, location.pathname + location.search);
-
-
-            $('a').live('click', function(){
+            $('a:not([target])').live('click', function(){
                 var href = $(this).attr('href');
+                if (href.substr(0, 7) == 'mailto:') return true;
+                if (href == '#') return true;
+                fnSlideOut();
                 $.get(href, function(res){
                     History.pushState({res:res}, '', href);
+                    fnSlideIn();
                 });
                 return false;
             });
